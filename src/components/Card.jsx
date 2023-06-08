@@ -1,13 +1,18 @@
-import "./Card.css";
+import { useState } from "react";
+import './Card.css'
 
-const Card = (props) => {
-  const { name, image } = props;
-  return (
-    <div className="cardGlobal">
-      <img className="cardImg" src={image} alt="poulet roux" />
-      <p>{name}</p>
-    </div>
-  );
-};
+const Card = (Props) => {
+const {name , image, height, mass} = Props;
+    return(
+        <div className="CartBox">
+            <img className="CartimgBox" src={image} alt={name} />
+        </div>
+       
+        <div>
+          <h1 className="CartTitleBox" > {name}</h1>
+          <p className="CartheightBox">{height}</p>
+          <p className="CartmassBox">{mass}</p>
+        </div>
+)}
 
 export default Card;
