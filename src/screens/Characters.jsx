@@ -1,26 +1,29 @@
-import { useState } from "react";
-import { useEffect} from "react";
-import './Characters.css'
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
+import Card from "../components/Card";
 
-const Characters =() => {
+const Characters = () => {
+  const [peoples, setPeoples] = useState([]);
 
-    useEffect(() =>{
-        fetch("https://miadil.github.io/starwars-api/api")
-          .then((res) => res.json())
-          .then((res) => console.log(res));
+  useEffect(() => {
+    fetch("https://miadil.github.io/starwars-api/api")
+      .then((res) => res.json())
+      .then((res) => console.log(res) || setPeoples(res));
+  }, []);
 
-    }, [])
-}
-
-//     const Cards = (Props) => {
-
-//     return(
-//         <div className="GlobalCard">
-//             <img src={Props.clef.img} alt={Props.clef.Name} />
-//             <h1 style= {{color:Props.clef.color}}> {Props.clef.Name}</h1>
-//             <p>{Props.clef.descrip}</p>
-//         </div>
-// )}
+  return (
+    <>
+      {peoples.map((people) => {
+        return (
+          <Link to={`/characters/${people.id}`}>
+            <Card name={people.name} image={people.image} key={people.id} />
+          </Link>
+        );
+      })}
+      <p> ICI Characters</p>
+    </>
+  );
+};
 
 export default Characters;
