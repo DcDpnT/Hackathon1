@@ -1,16 +1,13 @@
 import Card from "../components/Card";
+import CardFilter from "../components/Cardfilter";
+import "./Choice.css"
 
 const Choice = () => {
     return (
         <>
-        {TabCaracters.map((TabCaracters) => {
-            return < Card clef={TabCaracters} key={TabCaracters.id}/>
-            })}
-        {/* < Card /> */}
-        <p> ICI Choice </p>
-
+          <CardFilter />
         </>
     );
 }
 
-export default Choice
+export default Choice;

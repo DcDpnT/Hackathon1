@@ -1,19 +1,54 @@
-import { useEffect,useState } from "react"
-import {useParams} from "react-router-dom"
-import {Link} from "react-router-dom"
-import Card from "../components/Card";
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import "./CardFilter.css"
 
+const CardFilter = () => {
+  const [cards, setCards] = useState([]);
+  const [fiteredCardsState, setFiteredCardsState] = useState([]);
 
-import "./Cardfilter.css";
+  // const { id } = useParams();
+  
+  useEffect(() => {
+    fetch("https://miadil.github.io/starwars-api/api/all.json")
+      .then((res) => res.json())
+      .then((res) => {
+        setFiteredCardsState(res)
+        setCards(res)
+      } );
+  }, []);
+  
+  const filterMale = () => {
+    const filteredCards = cards.filter((card) => card.gender ==="male") ;
+    setFiteredCardsState(filteredCards);
+  };
 
-const Card = (props) => {
-  const { name, image } = props;
-  return (
-    <div className="cardGlobal">
-      <img className="cardImg" src={image} alt={people.name} />
-      <p>{name}</p>
-    </div>
-  );
+  const filterFemale = () => {
+    const filteredCards = cards.filter((card) => card.gender ==="female") ;
+    setFiteredCardsState(filteredCards);
+  };
+  const resetFilter = () => {
+    setFiteredCardsState(cards);
+  }
+  
+   return (
+
+   <>   
+        <button className="filter" onClick={filterFemale}>Filter Female</button>
+        <button className="filter" onClick={filterMale}>Filter Male</button>
+        <button className="filter" onClick={resetFilter}>reset</button>
+          {fiteredCardsState.map((card) => (
+          <div key={card.id}>
+            <img src={card.image} alt={card.name} />
+            <p>{card.name}</p>
+            <button className="link">
+            <Link to={`./characters/${card.id}`}>View Profile</Link>
+            </button>
+          </div>
+          ))}
+
+    </>
+  );  
 };
 
-export default Card;
+
+export default CardFilter ;

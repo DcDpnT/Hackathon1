@@ -4,6 +4,7 @@ import './Card.css'
 const Card = (Props) => {
 const {name , image, height, mass} = Props;
     return(
+      <>
         <div className="CartBox">
             <img className="CartimgBox" src={image} alt={name} />
         </div>
@@ -13,6 +14,7 @@ const {name , image, height, mass} = Props;
           <p className="CartheightBox">{height}</p>
           <p className="CartmassBox">{mass}</p>
         </div>
+      </>
 )}
 
 export default Card;
