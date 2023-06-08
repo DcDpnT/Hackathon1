@@ -1,0 +1,85 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://cdn.discordapp.com/attachments/1101546225041428485/1116302855956082708/pexels-renato-calsavara-8148203.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 100%;
+}
+
+#container{
+    position: relative;
+    top: 10%;
+    width: 100%;
+    display: flex; 
+}
+
+#petitpersos {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#petitperso1 {
+    width : 200px; height : 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    
+}
+
+#petitperso2 {
+    
+    width : 200px; height : 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+}
+
+#petitperso3 {
+    width : 200px; height : 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+}
+
+#petitperso4 {
+    width : 200px; height : 200px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+}
+
+.buttonLove {
+display : flex;
+justify-content: center;
+}
+
+#button {
+    display: flex;
+    position: absolute;
+   justify-content: center;
+
+}
+
+#baiser {
+    position: relative;
+    top: 20%;
+    bottom:  20%;
+    left:60%;
+    width: 2000px;
+    object-fit: cover;
+    border-radius: 50%;
+
+ 
+}
