@@ -4,7 +4,8 @@ const Choise01 = ({sexe, setSexe,setIndex}) => {
     return (
 			<>
 			<div className='buttonLove'>
-       <div>votre choix sexe : {sexe}</div>
+				
+       <div id="global">Des Hommes et Femmes et d'autres créatures pres de chez vous. votre choix sexe : {sexe}</div>
 				<div id="HF">
 					<button className='HommeFemme' onClick={() => setSexe("male")}>HOMME</button>
 					<button className='HommeFemme' onClick={() => setSexe("female")}> FEMME</button>
