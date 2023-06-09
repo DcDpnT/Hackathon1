@@ -1,7 +1,14 @@
-const Choice = () => {
-    return (
+import { useParams } from "react-router-dom"
 
-        <p> ICI Choice </p>
+const Choice = () => {
+    const {sexe,species,planet} = useParams()
+    return (
+        <>
+            <p>{sexe}</p>
+            <p>{species}</p>
+            <p>{planet}</p>
+            <p> ICI Choice </p>
+        </>
     );
 }
 

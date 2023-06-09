@@ -7,7 +7,7 @@ const Characters = () => {
   const [peoples, setPeoples] = useState([]);
 
   useEffect(() => {
-    fetch("https://miadil.github.io/starwars-api/api")
+    fetch("https://miadil.github.io/starwars-api/api/all.json")
       .then((res) => res.json())
       .then((res) => console.log(res) || setPeoples(res));
   }, []);
