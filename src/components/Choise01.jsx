@@ -1,3 +1,5 @@
+import "./Choise01.css"
+
 const Choise01 = ({sexe, setSexe,setIndex}) => {
     return (
 			<>

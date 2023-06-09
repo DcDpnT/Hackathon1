@@ -18,6 +18,7 @@
     top: 10%;
     width: 100%;
     display: flex; 
+    margin-top: 100px;
 }
 
  /*PETITS PERSOS*/
@@ -57,10 +58,18 @@
    border-radius: 50%;
 }
 
-#texteperso {
-font-size: 50px;
-color:whitesmoke;
+#deuxiemediv {
+  display: flex;
+  justify-content: center;
+}
 
+#deuxiemediv {
+  display: flex;
+  background-color: whitesmoke;
+  margin-left: 400px;
+  gap: 50px;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
 }
 
 /*BUTTON*/
@@ -70,10 +79,12 @@ color:whitesmoke;
     padding-bottom: 200px;
     padding-left: 200px;
     padding-right: 250px;
-    width: 2000px;
+    width: 1800px;
     display : block;
     border: whitesmoke 13px solid;
-    border-radius: 250px; 
+    border-top-left-radius: 30;
+    border-bottom-left-radius: 30px;
+
     background-color: antiquewhite;
     margin-left: auto;
     margin-right: auto;
@@ -82,15 +93,14 @@ color:whitesmoke;
     background-color: #fcb2df;
 }
 
-#HF {
-    display: flex;
-}
+
 
 .HommeFemme {
     display: flex;
     justify-content: center;
     font-size: 100px;
     margin-bottom: 300px;
+    border-radius: 50%;
 }
 
 .btn {
@@ -276,7 +286,7 @@ color:whitesmoke;
     top: 20%;
     bottom:  20%;
     left:20%;*/
-    width: 2000px; 
+    width: 1600px; 
     object-fit: cover;
     border-radius: 50%;
 }
