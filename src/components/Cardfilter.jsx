@@ -1,21 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+
 import "./CardFilter.css"
 
 const CardFilter = () => {
   const [cards, setCards] = useState([]);
   const [fiteredCardsState, setFiteredCardsState] = useState([]);
-
-  // const { id } = useParams();
-  
-  useEffect(() => {
-    fetch("https://miadil.github.io/starwars-api/api/all.json")
-      .then((res) => res.json())
-      .then((res) => {
-        setFiteredCardsState(res)
-        setCards(res)
-      } );
-  }, []);
+  const {sexe,homeworld,species} = useParams()
   
   const filterMale = () => {
     const filteredCards = cards.filter((card) => card.gender ==="male") ;
@@ -29,6 +20,20 @@ const CardFilter = () => {
   const resetFilter = () => {
     setFiteredCardsState(cards);
   }
+
+  useEffect(() => {
+    fetch("https://miadil.github.io/starwars-api/api/all.json")
+      .then((res) => res.json())
+      .then((res) => {
+        setFiteredCardsState(res)
+        setCards(res)
+      } )
+  }, []);
+
+  useEffect((res) => {
+    const filteredCards = cards.filter((card) => card.gender === sexe &&  card.homeworld === homeworld  &&  card.species === species   )
+    setFiteredCardsState(filteredCards);
+  },[cards])
   
    return (
 

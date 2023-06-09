@@ -5,7 +5,7 @@ const Choise02 = ({homeworld, setHomeworld,setIndex}) => {
        <div>votre choix sexe : {homeworld}</div>
 				<div id="HF">
 					<button className='HommeFemme' onClick={() => setHomeworld("tatooine")}>TATOOINE</button>
-					<button className='HommeFemme' onClick={() => setHomeworld({homworld}!=="tatooine")}> OTHERS</button>
+					<button className='HommeFemme' onClick={() => setHomeworld("")}> OTHERS</button>
 				</div>
 				<button className="btn" type="button" onClick={()=> setIndex(2)}>
 					<strong>FIND LOVE</strong>

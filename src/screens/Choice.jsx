@@ -7,9 +7,9 @@ const Choice = () => {
             <p>{sexe}</p>
             <p>{species}</p>
             <p>{homeworld}</p>
-            <p> ICI Choice </p>
+           
+
         </>
     );
 }
-
 export default Choice;

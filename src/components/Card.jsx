@@ -2,7 +2,7 @@ import { useState } from "react";
 import './Card.css'
 
 const Card = (Props) => {
-const {name , image, height, mass} = Props;
+const {name , image, } = Props;
     return(
       <>
         <div className="CartBox">

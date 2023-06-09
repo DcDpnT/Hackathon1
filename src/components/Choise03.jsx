@@ -45,11 +45,14 @@ const Choise03 = ({ species, setSpecies, setIndex, sexe, setSex, homeworld, setH
           <button className="HommeFemme" onClick={() => setSpecies('human')}>
             HUMAN
           </button>
+          <button className="HommeFemme" onClick={() => setSpecies('droid')}>
+            DROID
+          </button>
           <button className="HommeFemme" onClick={() => setSpecies('others')}>
             OTHERS
           </button>
         </div>
-        <Link to={`/choice/${sexe}/${homeworld}/${species}`}>
+        <Link to={`/carfilter/${sexe}/${homeworld}/${species}`}>
           <button className="btn" type="button" onClick={handleClick}>
             <strong>FIND LOVE</strong>
             <div id="container-stars">

@@ -17,7 +17,7 @@ const Characters = () => {
       {peoples.map((people) => {
         return (
           <Link to={`/characters/${people.id}`}>
-            <Card name={people.name} image={people.image} height={people.height} mass={people.mass} key={people.id} />
+            <Card name={people.name} image={people.image} key={people.id} />
           </Link>
         );
       })}
