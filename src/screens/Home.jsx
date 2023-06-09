@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import Choise01 from "../components/Choise01"
+import Choise02 from '../components/Choise02';
+import Choise03 from '../components/Choise03';
 import './Home.css'
 // TODO 
 const Home = () => {
 		const [sexe, setSexe] = useState("")
-        const [spaces,setSpaces] =useState("")
-        const [espece, setEspece] =useState ("")
+        const [homeworld,setHomeworld] =useState("")
+        const [species, setSpecies] =useState ("")
 		const [index, setIndex] = useState(0)
 		
     return (
@@ -20,7 +22,7 @@ const Home = () => {
 
             	{/* <h1>Des Hommes des Femmes et d'autres créatures dans ta région galactique, n'attendent que toi sur ce site</h1> */}
 
-							{ index === 0 ? <Choise01 sexe={sexe} setSexe={setSexe} setIndex={setIndex} /> : index === 1 ? <Choise02 spaces={homewolrd} setSpaces={setHomeworld} setIndex={setIndex}/> :  index === 2 ? <Choise03 espece={species}/>: "" }
+							{ index === 0 ? <Choise01 sexe={sexe} setSexe={setSexe} setIndex={setIndex} /> : index === 1 ? <Choise02 homeworld={homeworld} setHomeworld={setHomeworld} setIndex={setIndex}/> :  index === 2 ? <Choise03 species={species} setSpecies={setSpecies} setIndex={setIndex} />: "" }
             <div id = "divbaiser">
             <img id = "baiser" src="https://media.discordapp.net/attachments/1101546225041428485/1116385074615681185/StarWarsLove1.png?width=884&height=884" alt="galaxie" />
             </div>

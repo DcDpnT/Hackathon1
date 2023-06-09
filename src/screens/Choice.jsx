@@ -1,13 +1,12 @@
-
 import { useParams } from "react-router-dom"
 
 const Choice = () => {
-    const {sexe,species,planet} = useParams()
+    const {sexe,homeworld,species} = useParams()
     return (
         <>
             <p>{sexe}</p>
             <p>{species}</p>
-            <p>{planet}</p>
+            <p>{homeworld}</p>
             <p> ICI Choice </p>
         </>
     );

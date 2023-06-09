@@ -13,8 +13,8 @@ const Choise01 = ({sexe, setSexe,setIndex}) => {
 						<div id="stars"></div>
 					</div>
 					<div id="glow">
-						<div class="circle"></div>
-						<div class="circle"></div>
+						<div className="circle"></div>
+						<div className="circle"></div>
 					</div>
 				</button>
 				</div>
@@ -22,4 +22,4 @@ const Choise01 = ({sexe, setSexe,setIndex}) => {
 			) 
 }
 
-export default Choise01
+export default Choise01;

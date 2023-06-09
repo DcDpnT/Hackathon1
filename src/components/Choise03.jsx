@@ -1,20 +1,20 @@
-const Choise03 = ({sexe, setSexe,setIndex}) => {
+const Choise03 = ({species, setSpecies,setIndex}) => {
     return (
 			<>
 			<div className='buttonLove'>
        <div>votre choix sexe : {species}</div>
 				<div id="HF">
-					<button className='HommeFemme' onClick={() => setSexe("male")}>HOMME</button>
-					<button className='HommeFemme' onClick={() => setSexe("female")}> FEMME</button>
+					<button className='HommeFemme' onClick={() => setSpecies("human")}>HUMAN</button>
+					<button className='HommeFemme' onClick={() => setSpecies({species} !=="human")}>OTHERS</button>
 				</div>
-				<button className="btn" type="button" onClick={()=> setIndex(1)}>
+				<button className="btn" type="button" onClick={()=> setIndex(3)}>
 					<strong>FIND LOVE</strong>
 					<div id="container-stars">
 						<div id="stars"></div>
 					</div>
 					<div id="glow">
-						<div class="circle"></div>
-						<div class="circle"></div>
+						<div className="circle"></div>
+						<div className="circle"></div>
 					</div>
 				</button>
 				</div>
@@ -22,4 +22,4 @@ const Choise03 = ({sexe, setSexe,setIndex}) => {
 			) 
 }
 
-export default Choise03
+export default Choise03;
