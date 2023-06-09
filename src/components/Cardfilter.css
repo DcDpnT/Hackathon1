@@ -3,7 +3,7 @@ button{
     width: 10%;
     text-decoration: none;
    text-decoration-style: none;
-    background-color: rgb(170, 115, 221);
+    background-color: #ffd700;
     color: white;
 }
 
@@ -23,5 +23,22 @@ a{
     margin-top: 16px;
     background-color:rgb(25, 25, 92);
 }
-
- 
+.Cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 550px;
+    width: 550px;
+    border: solid #ffd700;
+    margin: 10px;
+}
+.BoxCardfilter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}

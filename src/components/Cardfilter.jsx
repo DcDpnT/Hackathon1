@@ -38,11 +38,12 @@ const CardFilter = () => {
    return (
 
    <>   
+      <div className="BoxCardfilter">
         <button className="filter" onClick={filterFemale}>Filter Female</button>
         <button className="filter" onClick={filterMale}>Filter Male</button>
         <button className="filter" onClick={resetFilter}>reset</button>
           {fiteredCardsState.map((card) => (
-          <div key={card.id}>
+          <div className="Cards" key={card.id}>
             <img src={card.image} alt={card.name} />
             <p>{card.name}</p>
             <button className="link">
@@ -50,7 +51,7 @@ const CardFilter = () => {
             </button>
           </div>
           ))}
-
+    </div>
     </>
   );  
 };
