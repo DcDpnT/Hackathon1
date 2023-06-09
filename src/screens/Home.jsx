@@ -22,7 +22,7 @@ const Home = () => {
 
             	{/* <h1>Des Hommes des Femmes et d'autres créatures dans ta région galactique, n'attendent que toi sur ce site</h1> */}
 
-							{ index === 0 ? <Choise01 sexe={sexe} setSexe={setSexe} setIndex={setIndex} /> : index === 1 ? <Choise02 homeworld={homeworld} setHomeworld={setHomeworld} setIndex={setIndex}/> :  index === 2 ? <Choise03 species={species} setSpecies={setSpecies} setIndex={setIndex} />: "" }
+							{ index === 0 ? <Choise01 sexe={sexe} setSexe={setSexe} setIndex={setIndex} /> : index === 1 ? <Choise02 homeworld={homeworld} setHomeworld={setHomeworld} setIndex={setIndex}/> :  index === 2 ? <Choise03 sexe={sexe} setSexe={setSexe} homeworld={homeworld} setHomeworld={setHomeworld} species={species} setSpecies={setSpecies} setIndex={setIndex} />: "" }
             <div id = "divbaiser">
             <img id = "baiser" src="https://media.discordapp.net/attachments/1101546225041428485/1116385074615681185/StarWarsLove1.png?width=884&height=884" alt="galaxie" />
             </div>
