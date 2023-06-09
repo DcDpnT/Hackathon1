@@ -1,0 +1,17 @@
+
+
+#HF {
+    width: 2000px;
+    display : flex;
+    justify-content: center ;
+    gap: 150px;
+
+}
+
+.HommeFemme {
+    width: 700px;
+    border-radius: 100px;
+    display : flex;
+    justify-content: center ;
+    
+}

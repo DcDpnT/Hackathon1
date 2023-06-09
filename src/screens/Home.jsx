@@ -1,31 +1,40 @@
 import { useState } from 'react';
 import Choise01 from "../components/Choise01"
+import Choise02 from "../components/Choise02"
 import './Home.css'
+
 // TODO 
+
 const Home = () => {
 		const [sexe, setSexe] = useState("")
+        const [spaces, setSpaces]= useState("")
+        const [espece, setEspece]= useState("")
 		const [index, setIndex] = useState(0)
 		
     return (
-			<div className='body'>   
-        <div id= "container">
-            <div id = 'petitpersos'>
-                <img id= 'petitperso1' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385075131584522/StarWarsLove2.jpg?width=588&height=884" alt= "petit perso"  />
-                <img id= 'petitperso2' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385075416805448/StarWarsLove3.jpg?width=854&height=884" alt= "petit perso"  />
-                <img id= 'petitperso3' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385075672645763/StarWarsLove4.jpg?width=1456&height=820" alt= "petit perso"  />
-                <img id= 'petitperso4' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385076071108718/StarWarsLove5.jpg?width=638&height=884" alt= "petit perso"  />
-            </div>
 
-            	{/* <h1>Des Hommes des Femmes et d'autres créatures dans ta région galactique, n'attendent que toi sur ce site</h1> */}
+		<div className='body'>   
+            <div id= "container">
+                <div id = 'petitpersos'>
+                    <img id= 'petitperso1' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385075131584522/StarWarsLove2.jpg?width=588&height=884" alt= "petit perso"  />
+                    <img id= 'petitperso2' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385075416805448/StarWarsLove3.jpg?width=854&height=884" alt= "petit perso"  />
+                    <img id= 'petitperso3' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385075672645763/StarWarsLove4.jpg?width=1456&height=820" alt= "petit perso"  />
+                    <img id= 'petitperso4' src ="https://media.discordapp.net/attachments/1101546225041428485/1116385076071108718/StarWarsLove5.jpg?width=638&height=884" alt= "petit perso"  />
+                </div>
 
-							{ index === 0 ? <Choise01 sexe={sexe} setSexe={setSexe} setIndex={setIndex} /> : index === 1 ? <p>choise02</p> :  index === 2 ? <p>choise03</p>: "" }
-            <div id = "divbaiser">
-            <img id = "baiser" src="https://media.discordapp.net/attachments/1101546225041428485/1116385074615681185/StarWarsLove1.png?width=884&height=884" alt="galaxie" />
-            </div>
+        
+                <div id= "deuxiemediv">
+                </div>
+            { index === 0 ? <Choise01 sexe={sexe} setSexe={setSexe} setIndex={setIndex} /> : index === 1 ? <Choise02 spaces={homeworld} setSpaces={setHomeworld} setIndex={setIndex}/> :  index === 2 ? <p>choise03</p>: "" }         
+                    
+                    <div id = "divbaiser">
+                        <img id = "baiser" src="https://media.discordapp.net/attachments/1101546225041428485/1116385074615681185/StarWarsLove1.png?width=884&height=884" alt="galaxie" />
+                    </div>
+               
+                </div>
+            // <p> Page Home ICI </p>
         </div>
-
-        <p>page Home</p>
-</div>
+   
     );
 }
 
